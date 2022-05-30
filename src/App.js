@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Routes, BrowserRouter as Router, Route} from 'react-router-dom';
 
-function App() {
+import Bid from "./BidData/Bid";
+import HomeUI from "./MainUI/HomeUI"
+import ErrPage from './ErrPage/ErrPage';
+import SelectBid from "./SelectedBid/SelectBid"
+import Support from './support/Support';
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+        <Routes>
+          
+          <Route exact path="/bid" element={<Bid/>}/>
+          <Route exact path="/bid/:id" element={<SelectBid/>}/>
+          <Route exact path="/" element={<HomeUI/>}/>
+          <Route exact path="/supp" element={<Support/>}/>
+         
+          <Route path="*" element={<ErrPage/>}/>
+        </Routes>
+      </Router>
+  )
 }
-
-export default App;

@@ -1,0 +1,60 @@
+.card-bid{
+    /* display: grid; */
+    display: flex;
+    height: 50px;
+    width: 100%;
+    /* padding: 20px 0; */
+    margin: 20px 0;
+    /* background-color: red; */
+    /* text-align: right; */
+    color: #0009;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: .1s;
+    /* grid-template-columns: auto auto auto auto auto; */
+}
+.card-bid:hover{
+    background-color: #668df7;
+    color: aliceblue;
+}
+.card-bid div{
+    width: 10%;
+    /* text-align: center; */
+}
+.card-bid img{
+    height: 50px;
+    width: 50px;
+    border: 2px solid #0003;
+    border-radius: 50%;
+    object-fit: cover;
+    outline: none;
+}
+.card-bid .card-premi,
+.card-bid .card-nin{
+    text-align: center;
+}
+.card-nin-low{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    background: #668df7;
+    font-size: 1.2em;
+    padding-bottom: 7px;
+    margin-left: 20px;
+    box-shadow: inset 3px 6px 13px #fff5,
+        inset -3px -4px 13px #0003,
+        7px 6px 5px #0005;
+        cursor: pointer;
+    transition: .2s;
+}
+.card-nin-low:hover{
+    background: #32acfd;
+    transform: scale(1.1);
+}
+.lis-bid{
+    text-decoration: none;
+    color: #0008;
+}
