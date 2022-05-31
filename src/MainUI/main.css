@@ -346,6 +346,7 @@ background: linear-gradient(10deg,#9ccbf7,#5073d4);
     .ham{
         visibility: visible;
         pointer-events: all;
+        /* background-color: red; */
     }
     .header nav,
     .header .info

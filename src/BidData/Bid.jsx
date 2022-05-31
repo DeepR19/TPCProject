@@ -110,7 +110,6 @@ function Bid() {
         if(done){
 
           const pages = getPager(25, 1, 10)
-          // console.log("aofde", pages.pages)
           setPages(pages.pages)
         }
         return(
@@ -129,16 +128,10 @@ function Bid() {
 
          const data11 = datas.slice(start, end);
 
-        // const de = data11.sort((a,c)=>{
-        //   return a.Customer.bids[0] - c.Customer.bids[0]
-        // })
-        console.log(data11, start, end);
-
         setData(data11);
        },[page])
 
       const precHandler = ()=>{
-        // setPage(page-1)
         if(page-1<0){
           setPage(page)
         }
@@ -163,19 +156,30 @@ function Bid() {
         const end = (page*10) 
 
         const data11 = datas.slice(start, end)
-        // const de = data11.sort((a,c)=>{
-        //   return a.Customer.bids[0] - c.Customer.bids[0]
-        // })
-
-        console.log(data11, start, end);
-
         setData(data11)
       }
+      let dov = document.querySelector('.ham');
+      const ham = ()=>{
+          document.querySelector(".header").classList.toggle("active")
+          dov.classList.toggle("active")
+      }
+  
+      window.addEventListener("resize",()=>{
+          if(window.outerWidth > 1200){
+              document.querySelector(".header").classList.remove("active")
+              dov.classList.remove("active")
+  
+          }
+  
+      })
 
-
-      // console.log("dara",datas)
       return (
         <>
+         <div className="ham" onClick={ham}>
+            <li></li>
+            <li></li>
+            <li></li>
+        </div>
     <Header/>
 
     <div className='bidHeader'>
@@ -192,7 +196,6 @@ function Bid() {
       {
         data.map((index, item)=>{
           return (
-            // <Nab data={item} index={index}/>
             <Card index={index}/>
             )
           })

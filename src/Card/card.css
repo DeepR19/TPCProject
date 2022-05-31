@@ -19,10 +19,13 @@
     background-color: #668df7;
     color: aliceblue;
 }
-.card-bid div{
-    width: 10%;
+.lis-bid div{
+    width: 20%;
     /* text-align: center; */
 }
+/* .lis-bid{
+    background-color: red;
+} */
 .card-bid img{
     height: 50px;
     width: 50px;

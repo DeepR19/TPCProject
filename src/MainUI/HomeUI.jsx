@@ -10,15 +10,17 @@ import "./main.css";
 
 export default function HomeUI() {
     let dov = document.querySelector('.ham');
-    const ham = ()=>{
+    const ham = (e)=>{
         document.querySelector(".header").classList.toggle("active")
-        dov.classList.toggle("active")
+        e.target.classList.toggle("active")
+        // console.log(dov.classList)
     }
 
     window.addEventListener("resize",()=>{
         if(window.outerWidth > 1200){
             document.querySelector(".header").classList.remove("active")
             dov.classList.remove("active")
+            // console.log(dov.classList)
 
         }
 
@@ -32,7 +34,7 @@ export default function HomeUI() {
         <li></li>
     </div>
     <Header/>
-        {/* <!-- </div> --> */}
+
     <section>
         <div className="section-data">
             <h1>NexIOT</h1>

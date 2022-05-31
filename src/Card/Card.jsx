@@ -20,12 +20,10 @@ export default function Card(data) {
     <div className='card-bid'>
         <Link to={lis} className='lis-bid'>
           <img src={img} alt="" />
-          {/* <div className="lis-dis"> */}
         <div>{data.index.Customer.firstname}</div>
         <div>{data.index.Customer.lastname}</div>
         <div>{data.index.Customer.email}</div>
         <div className='card-premi'>{data.index.Customer.hasPremium}</div>
-          {/* </div> */}
             
       </Link>
         <div className='card-nin'>

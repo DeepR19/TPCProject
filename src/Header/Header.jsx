@@ -21,8 +21,6 @@ export default function Header() {
         </nav>
 
         <div className="info">
-            {/* <li>Sign In</li> */}
-            {/* <span>search</span> */}
         </div>
     </div>
 

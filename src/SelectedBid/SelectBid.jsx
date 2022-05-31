@@ -15,7 +15,6 @@ export default function SelectBid() {
       item.Customer.firstname = loc
       )
   })
-  // console.log(loc, d11)
 
   return (
     <>
