@@ -173,7 +173,7 @@ function Bid() {
       }
 
 
-      console.log("dara",datas)
+      // console.log("dara",datas)
       return (
         <>
     <Header/>
@@ -185,7 +185,8 @@ function Bid() {
       <li>Premium</li>
       <li>Bid</li>
     </div>
-    
+    <div className="center-div">
+
     <div className='list-bid'>
 
       {
@@ -197,6 +198,8 @@ function Bid() {
           })
         } 
         </div>
+    </div>
+      
         <div className='pagi'>
 
           <button onClick={precHandler}>Prev</button>

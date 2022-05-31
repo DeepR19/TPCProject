@@ -6,9 +6,11 @@
 body{
     height: 100vh;
     width: 100%;
+    min-height: 100vh;
     overflow-y: scroll;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: default;
+    min-width: 500px;
 }
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-corner,
@@ -376,17 +378,19 @@ background: linear-gradient(10deg,#9ccbf7,#5073d4);
     section .section-data{
         width: 70%;
         align-items: center;
+        z-index: 10;
     }
     .section-img{
         width: 100%;
         position: absolute;
-
+        z-index: 0;
         opacity: .1;
     }
     footer {
     justify-content:center;
         
     }
+    
 }
 @media (max-width: 700px) {
     section .section-data{
@@ -396,3 +400,5 @@ background: linear-gradient(10deg,#9ccbf7,#5073d4);
         margin-left: -300px;
     }
 }
+
+

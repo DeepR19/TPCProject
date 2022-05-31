@@ -86,3 +86,19 @@
     background: linear-gradient(#6096fa, #0952da);
     box-shadow: 10px 10px 20px #0007;
 }
+
+
+@media (max-width: 1200px){
+    .strip{
+        bottom: 10px;
+    }
+}
+@media (max-width: 600px){
+    .strip{
+        bottom: 0px;
+    }
+    .aup{
+        font-size: 2em;
+        margin-top: -50px;
+    }
+}

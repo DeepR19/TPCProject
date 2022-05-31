@@ -2,7 +2,7 @@
     /* display: grid; */
     display: flex;
     height: 50px;
-    width: 100%;
+    width: 90%;
     /* padding: 20px 0; */
     margin: 20px 0;
     /* background-color: red; */
@@ -14,7 +14,8 @@
     transition: .1s;
     /* grid-template-columns: auto auto auto auto auto; */
 }
-.card-bid:hover{
+.card-bid:hover, 
+.card-bid:hover .card-nin{  
     background-color: #668df7;
     color: aliceblue;
 }
@@ -29,10 +30,21 @@
     border-radius: 50%;
     object-fit: cover;
     outline: none;
+    transition: .5s;
 }
 .card-bid .card-premi,
 .card-bid .card-nin{
     text-align: center;
+}
+.card-nin{
+    width: 100px;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    position: relative;
+    /* right: ; */
+    margin: 0 -100px 0 00px;
+    align-items: center;
 }
 .card-nin-low{
     height: 40px;
@@ -54,7 +66,102 @@
     background: #32acfd;
     transform: scale(1.1);
 }
+/* .card-bid .card-nin-low:hover{
+    color: #fff;
+} */
 .lis-bid{
+    width: 100%;
+    /* border: 2px solid #000; */
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
+    align-items: center;
     color: #0008;
+}
+.lis-bid:hover{
+    color: #fff;
+}
+.card-premi{
+    text-align: right;
+}
+
+
+@media(max-width: 1180px){
+    .card-bid{
+        font-size: .9em;
+    }
+    .card-nin-low{
+        margin-left: 2px;
+        height: 30px;
+        font-size: .9em;
+        width: 30px;
+
+    }
+    .card-nin{
+    margin: 0 -80px 0 00px;
+    padding-left: 40px;
+
+    }
+    .lis-bid div{
+        /* border: 2px solid #000; */
+        height: 100%;
+        width: max-content;
+    }
+}
+
+@media(max-width: 780px){
+    .card-bid{
+        font-size: .9em;
+    }
+    .card-nin-low{
+        margin-left: 2px;
+        height: 30px;
+        font-size: .9em;
+        width: 30px;
+    }
+    .lis-bid div{
+        /* border: 2px solid #000; */
+        height: 100%;
+        width: max-content;
+    }
+}
+@media (max-width: 610px) {
+    
+    .card-bid{
+        height: 160px;
+        width: 90%;
+    }
+    .card-bid:hover, 
+    .card-bid:hover .card-nin{  
+        background: none;
+        color: #000;
+    }
+    .card-nin:hover{
+        color: #0008;
+    }
+    .lis-bid:hover{
+        background: none;
+        color: #0008;
+    }
+    .lis-bid img{
+        transform: translateX(200px) translateY(10px) scale(1.8);
+    }
+    .lis-bid{
+        background-color: #4d7bf7fa;
+        color: #fff;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items:  start;   
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 5px 3px 10px #0005;     
+    }
+    .lis-bid img{
+        margin-left: -10px;
+        margin-bottom: 10px;
+    }
+    .card-nin{
+    margin: 0 00px 0 00px;
+        width: 100px;
+    }
 }

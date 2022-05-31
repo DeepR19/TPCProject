@@ -24,7 +24,22 @@
     height: max-content;
     overflow: scroll;
 }
+.list-bid{
+    padding: 0 20px;
+    width: 90%;
+    /* background: red; */
+    /* justify-content: space-between; */
+    
+}
 
+.center-div{
+    height: 100vh;
+    width: 100%;
+    /* background: green; */
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
 .pagi{
     height: 100px;
     width: 100%;
@@ -50,4 +65,30 @@
 }
 .pagi button:hover{
     background: #5f87f3;
+}
+
+@media(max-width: 780px){
+    .bidHeader{
+        font-size: 1em;
+    }
+    
+}
+
+@media (max-width: 610px) {
+    .bidHeader{
+        color: #ddd0;
+    }
+    .pagi{
+        position: absolute;
+        bottom: -185vh;
+        /* float: bottom; */
+        /* bottom: 10px; */
+        /* background-color: red; */
+    }
+    .list-bid{
+        /* background-color: red; */
+        position: relative;
+        padding-bottom: 190px
+
+    }
 }
