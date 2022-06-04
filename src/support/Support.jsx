@@ -2,28 +2,10 @@ import React from 'react'
 import Header from '../Header/Header'
 
 export default function Support() {
-  let dov = document.querySelector('.ham');
-  const ham = ()=>{
-      document.querySelector(".header").classList.toggle("active")
-      dov.classList.toggle("active")
-  }
 
-  window.addEventListener("resize",()=>{
-      if(window.outerWidth > 1200){
-          document.querySelector(".header").classList.remove("active")
-          dov.classList.remove("active")
-
-      }
-
-  })
   return (
       <>
-      {/* <div className ="container"> */}
-    <div className="ham" onClick={ham}>
-        <li></li>
-        <li></li>
-        <li></li>
-    </div>
+     
       <Header/>
       <div className="aup">
 

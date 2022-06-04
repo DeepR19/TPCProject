@@ -9,30 +9,11 @@ import Header from '../Header/Header';
 import "./main.css";
 
 export default function HomeUI() {
-    let dov = document.querySelector('.ham');
-    const ham = (e)=>{
-        document.querySelector(".header").classList.toggle("active")
-        e.target.classList.toggle("active")
-        // console.log(dov.classList)
-    }
-
-    window.addEventListener("resize",()=>{
-        if(window.outerWidth > 1200){
-            document.querySelector(".header").classList.remove("active")
-            dov.classList.remove("active")
-            // console.log(dov.classList)
-
-        }
-
-    })
+    
   return (
       <>
     <div className ="container">
-    <div className="ham" onClick={ham}>
-        <li></li>
-        <li></li>
-        <li></li>
-    </div>
+    
     <Header/>
 
     <section>
