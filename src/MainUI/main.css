@@ -10,7 +10,7 @@ body{
     overflow-y: scroll;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     cursor: default;
-    min-width: 500px;
+    /* min-width: 500px; */
 }
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-corner,
@@ -79,7 +79,7 @@ body{
 }
 .header{
     height: 100px;
-    width: 100%;
+    width: 100vw;
     /* background: #0001; */
     display: flex;
     justify-content: space-around;
@@ -170,12 +170,12 @@ section .section-data{
     flex-direction: column;
 }
 section .section-data h1{
-    font-size: 5em;
+    font-size: 5vmax;
     transition: 1s;
     color: #7ab8f1;
 }
 section .section-data h3{
-    font-size: 2em;
+    font-size: 2vmax;
     margin-left: 15px;
     transition: 1s;
     color: #5073d4;
@@ -196,7 +196,7 @@ section .section-data li{
 .section-data p{
     line-height: 30px;
     /* text-align: justify; */
-    font-size: 1.1em;
+    font-size: 1.vmax;
     letter-spacing: 1px;
     color: #0007;
 }
@@ -240,7 +240,7 @@ footer{
     height: 100px;
     width: 100%;
     margin-bottom: 0;
-    justify-content:start;
+    justify-content:flex-start;
     padding-left: 30px;
     padding-top: 30px;
     align-items: center;
@@ -305,14 +305,14 @@ background: linear-gradient(10deg,#9ccbf7,#5073d4);
 }
 
 @media (max-width: 1600px) {
-    section .section-data h1{
+    /* section .section-data h1{
         font-size: 4.5em;
-    }
+    } */
 }
 @media (max-width: 1400px) {
-    section .section-data h1{
+    /* section .section-data h1{
         font-size: 3.7em;
-    }
+    } */
     .section-data li{
         margin: 20px;
     }
@@ -383,12 +383,22 @@ background: linear-gradient(10deg,#9ccbf7,#5073d4);
         width: 70%;
         align-items: center;
         z-index: 10;
+       
+        background: url(
+            "./../assests/re.webp"
+        ), rgba(255, 255, 255, 0.849);
+        background-blend-mode: overlay;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
     }
     .section-img{
-        width: 100%;
+        /* width: 0%; */
         position: absolute;
         z-index: 0;
         opacity: .1;
+    filter: blur(6px);
+
     }
     footer {
     justify-content:center;
@@ -403,6 +413,23 @@ background: linear-gradient(10deg,#9ccbf7,#5073d4);
     .none{
         margin-left: -300px;
     }
+    .buttons{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
+@media (max-width: 600px) {
+    section .section-data p{
+        font-size: 1.8vmax;
+    }
+    .container{
+        height: 50vh;
+        padding-top: 40vmax;
+    }
+    footer{
+        padding-top: 90px;
+    }
+}

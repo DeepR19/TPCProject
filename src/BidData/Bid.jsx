@@ -166,6 +166,7 @@ function Bid() {
     <Header/>
 
     <div className='bidHeader'>
+      <li></li>
       <li>FirstName</li>
       <li>LastName</li>
       <li>Email</li>

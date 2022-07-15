@@ -10,9 +10,8 @@ export default function Card(data) {
     const [bid , setBid] =useState(max)
 
     const handleLow =(e)=>{
-       const prev = Number([e.target.previousSibling][0].nodeValue)
-
-      prev === max ? setBid(min): setBid(max)       
+       const prev = Array(e.target.parentElement.previousSibling)[0].data
+      Number(prev) === max ? setBid(min): setBid(max)       
     }
     const lis = `/bid/${data.index.Customer.firstname}`
   return (
@@ -27,8 +26,12 @@ export default function Card(data) {
             
       </Link>
         <div className='card-nin'>
-            {bid}
-            <button className='card-nin-low' onClick={handleLow}>👈</button>
+            {bid} 
+            <button className='card-nin-low'>
+              {
+                bid === max ? <p onClick={handleLow}>MAX</p> : <p onClick={handleLow}>MIN</p>
+              }
+            </button>
         </div>
       
       </div>

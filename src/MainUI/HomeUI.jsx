@@ -9,9 +9,11 @@ import Header from '../Header/Header';
 import "./main.css";
 
 export default function HomeUI() {
+  
     
   return (
       <>
+   
     <div className ="container">
     
     <Header/>

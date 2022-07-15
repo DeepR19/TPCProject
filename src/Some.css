@@ -6,10 +6,13 @@
     background-color: #ddd3;
     width: 100%;
     margin-top: 110px;
-    display: flex;
+    /* display: flex;
     justify-content: space-around;
-    align-items: flex-end;
-    font-size: 1.2em;
+    align-items: flex-end; */
+    align-items: center; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    font-size: 1.3vmax;
     color: #5073d4;
     font-weight: bolder;
     letter-spacing: 1px;
@@ -37,14 +40,14 @@
     width: 100%;
     /* background: green; */
     display: flex;
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
 }
 .pagi{
     height: 100px;
     width: 100%;
     display: flex;
-    justify-content: start;
+    justify-content:flex-start;
     padding-left: 100px;
     align-items: center;
     border-top: 2px solid #5073d471;
@@ -67,9 +70,11 @@
     background: #5f87f3;
 }
 
-@media(max-width: 780px){
+@media(max-width: 900px){
     .bidHeader{
-        font-size: 1em;
+        font-size: 1.7vmax;
+        grid-template-columns: .5fr 1fr 1fr 1fr 1fr 1fr ;
+
     }
     
 }
@@ -81,6 +86,7 @@
     .pagi{
         position: absolute;
         bottom: -185vh;
+        padding-left: 25px;
         /* float: bottom; */
         /* bottom: 10px; */
         /* background-color: red; */
@@ -90,5 +96,11 @@
         position: relative;
         padding-bottom: 190px
 
+    }
+}
+
+@media (max-width: 310px) {
+    .pagi{
+        padding-left: 25px;
     }
 }
